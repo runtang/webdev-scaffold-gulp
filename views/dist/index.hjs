@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <!-- build和endbuild注释声明了合并后的assets文件名，不可删除-->
+    <link rel="stylesheet" href="/css/index.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="starter-template">
+        <h1>{{ title }}</h1>
+        <ul id="userList" class="list-group">
+        </ul>
+        <p>
+          <button id="btnLoad" class="btn">Load</button>
+          <button id="btnSet" class="btn">Set</button>
+        </p>
+      </div>
+    </div>
+    
+    <!-- build和endbuild注释声明了合并后的assets文件名，不可删除-->
+    <script src="/js/index.js"></script>
+
+    <script data-tpl="userinfo" type="text/x-hogan-template">
+      <li class="list-group-item">
+        <h5>userName: <% uname %></h5>
+        <p>age: <% age %></p>
+      </li>
+    </script>
+  </body>
+</html>
